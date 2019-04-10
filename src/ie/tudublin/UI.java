@@ -34,4 +34,20 @@ public class UI extends PApplet
 	public void draw()
 	{			
 	}
+	public void loadData() {
+        Table table = loadTable("colours.csv", "header");
+
+        // This will also work!
+        /*
+         * for(int i = 0 ; i < table.getRowCount() ; i ++) { TableRow row =
+         * table.getRow(i); System.out.println(row.getString("Display Name"));
+         * System.out.println(row.getString("Hab?")); }
+         */
+
+        for (TableRow row : table.rows()) {
+            Colour colour = new Colour(row);
+            colours.add(colour);
+        }
+    }
+	private ArrayList<Colour> colours= new ArrayList<Colour>();
 }
