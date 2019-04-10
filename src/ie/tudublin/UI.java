@@ -48,6 +48,12 @@ public class UI extends PApplet
             Colour colour = new Colour(row);
             colours.add(colour);
         }
+	}
+	
+	public void printColours() {
+        for (Colour colour : colours) {
+			System.out.println(colour);
+		}
     }
 	private ArrayList<Colour> colours= new ArrayList<Colour>();
 }
