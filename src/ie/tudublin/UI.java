@@ -33,7 +33,28 @@ public class UI extends PApplet
 	
 	public void draw()
 	{	
-				
+		line(100,100,200,100);
+		noFill();
+		rect(200,50,100,100);
+		line(300,100,400,100);
+		line(100,300,200,300);	
+		noFill();
+		rect(200,250,100,100);
+		line(300,300,400,300);
+		line(100,500,200,500);
+		noFill();
+		rect(200,450,100,100);
+		line(300,500,400,500);
+		line(100,700,200,700);
+		noFill();
+		rect(200,650,100,100);
+		line(300,500,400,500);
+		
+
+
+
+		
+
 	}
 	public void loadData() {
         Table table = loadTable("colours.csv", "header");
