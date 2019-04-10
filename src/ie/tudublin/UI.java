@@ -32,28 +32,37 @@ public class UI extends PApplet
 	}
 	
 	public void draw()
-	{			
+	{	
+				
 	}
 	public void loadData() {
         Table table = loadTable("colours.csv", "header");
 
-        // This will also work!
-        /*
-         * for(int i = 0 ; i < table.getRowCount() ; i ++) { TableRow row =
-         * table.getRow(i); System.out.println(row.getString("Display Name"));
-         * System.out.println(row.getString("Hab?")); }
-         */
-
         for (TableRow row : table.rows()) {
             Colour colour = new Colour(row);
             colours.add(colour);
-        }
+		}
+		Table table2 = loadTable("resistors.csv", "header");
+		for (TableRow row : table2.rows()) {
+            Resistor resistor = new Resistor(row);
+            resistors.add(resistor);
+		}
+
 	}
 	
 	public void printColours() {
         for (Colour colour : colours) {
 			System.out.println(colour);
 		}
-    }
+	}
+	
+	public Color findColor(int value)
+	{
+
+
+
+
+	}
 	private ArrayList<Colour> colours= new ArrayList<Colour>();
+	private ArrayList<Resistor> resistors= new ArrayList<Resistor>();
 }
